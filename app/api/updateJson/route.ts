@@ -1,7 +1,7 @@
 import axios, { AxiosError } from 'axios';
 import { NextRequest, NextResponse } from 'next/server';
 
-export default async function handler(req: NextRequest) {
+export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const response = await axios.post(
