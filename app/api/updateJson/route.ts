@@ -1,4 +1,4 @@
-//@ts-nocheck
+// Import Axios
 import axios from 'axios';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -27,6 +27,7 @@ export default async function handler(req: NextRequest) {
   } catch (error: unknown) {
     console.error('Error processing prompt:', error);
     if (error instanceof Error) {
+      //@ts-ignore
       const axiosError = error as any;
       return NextResponse.json(
         { message: axiosError.response?.data || 'An error occurred with the OpenAI API request.' },
