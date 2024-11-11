@@ -4,7 +4,8 @@ import { useState } from 'react';
 
 export default function Home() {
   const [prompt, setPrompt] = useState('');
-  const [responseJson, setResponseJson] = useState<any>(null);
+  
+  const [responseJson, setResponseJson] = useState<object | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
