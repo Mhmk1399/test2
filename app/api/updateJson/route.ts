@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { NextRequest, NextResponse } from 'next/server';
 
-export default async function handler(req: NextRequest, res: NextResponse) {
+export default async function handler(req: NextRequest) {
   try {
     const body = await req.json();
     // Make the API call to OpenAI with headers for authentication
